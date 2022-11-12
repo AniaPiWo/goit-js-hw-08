@@ -1,4 +1,3 @@
-
 const iframe = document.querySelector("iframe");
 const player = new Vimeo.Player(iframe);
 
@@ -10,7 +9,9 @@ player.getVideoTitle().then(function(title) {
     console.log('title:', title);
 });
 
-player.setCurrentTime(localStorage.getItem(CURRENT)).then(function(seconds) {
+
+
+/* player.setCurrentTime(localStorage.getItem()).then(function(seconds) {
     // seconds = the actual time that the player seeked to
 }).catch(function(error) {
     switch (error.name) {
@@ -22,7 +23,7 @@ player.setCurrentTime(localStorage.getItem(CURRENT)).then(function(seconds) {
             // some other error occurred
             break;
     }
-});
+});  */
 /* 
 1. Zapoznaj się z dokumentacją biblioteki odtwarzacza Vimeo.
 2. Dodaj bibliotekę jako zależność projektu poprzez npm.
