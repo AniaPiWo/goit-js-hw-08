@@ -16,12 +16,13 @@ player.on(
       JSON.stringify(timeStorage.seconds)
     );
     //console.log('played the video!');
-    console.log('video time:', timeStorage.seconds);
   }, 1000)
 );
 
-const savedTime = localStorage.getItem('videoplayer-current-time');
-//console.log(lastSavedTime);
+
+
+const savedTime = localStorage.getItem('videoplayer-current-time'); 
+//console.log(savedTime);
 
 player
   .setCurrentTime(savedTime)
@@ -34,8 +35,14 @@ player
         // the time was less than 0 or greater than the video’s duration
         break;
 
-      default:
+        default:
         // some other error occurred
         break;
     }
+  }
+  );
+
+  player.on('ended', function(data){
+    //console.log('Ended');
+    document.location.reload()
   });
