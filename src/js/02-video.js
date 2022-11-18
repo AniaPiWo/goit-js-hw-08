@@ -44,6 +44,8 @@ player
 
   player.on('ended', function(data){
     //console.log('Ended');
-    localStorage.clear();
+    //console.log(localStorage.getItem('videoplayer-current-time'))
+    localStorage.removeItem('videoplayer-current-time');
+    //localStorage.clear();
     document.location.reload()
   });
