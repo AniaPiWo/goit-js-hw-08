@@ -44,5 +44,6 @@ player
 
   player.on('ended', function(data){
     //console.log('Ended');
+    localStorage.clear();
     document.location.reload()
   });
